@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+html,body{
+    margin: 0;
+    padding: 0;
+    background-image: url(images/background.jpg);
+    /* Background image is centered vertically and horizontally at all times */
+    background-position: center center;
+    /* Background image doesn't tile */
+    background-repeat: no-repeat;
+    /* Background image is fixed in the viewport so that it doesn't move when 
+     the content's height is greater than the image's height */
+    background-attachment: fixed;
+     /* This is what makes the background image rescale based
+     on the container's size */
+     background-size: cover;
+     /* Set a background color that will be displayed
+     while the background image is loading */
+    background-color: #464646;
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#parent-container{
+    height: 100vh;
+    background-color: black;
+    opacity: 0.75;
+    width: 33%;
+    min-width: 400px;
+    margin: 0 auto;
+    transform: skew(-11deg);
+    display: flex;
+    align-items: center;    
+}
+#main-content-container{
+    width: 100%;
+    height: 60%;
+    padding-top: 5rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    transform: skew(11deg);
+}
+#logo-container{
+    width: 50%;
+    min-width: 250px;
+    display: flex;
+    justify-content: center;
+    flex: 1;      
+}
+#logo-img{
+    width: 50%;
+}
+/*--------------------------------------*/
+/*LOGIN FORM*/
+.login-form{
+    width: 45%;
+    min-width: 250px;
+    flex: 6;
+}
+.container-top{
+    width: 100%;
+    margin-top: 0.4rem;
+}
+.container-top p{
+    font-size: 0.9rem;
+    margin: 0;    
+}
+#span-login{
+    font-size: 1.3rem;
+}
+.container-input-fields-top{
+    display: flex;
+    flex-direction: column;    
+}
+.inputfield-login{
+    margin-top: 0.6rem;
+    border-radius: 6px;
+    opacity: 0.4;
+    color: black;
+    height: 2.2rem;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+}
+.inputfield-login::placeholder{
+    color: black;
+    padding-left: .8rem;
+    opacity: none;
+    font-size: 0.8rem;
+}
+.container-bottom{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    height: 1.8rem;
+}
+.container-bottom #login-button{
+    width: 40%;
+    border-radius: 18px;
+    color: black;
+    background-color: #3ac3bf;
+    border: none;
+}
+#login-button:focus{
+    outline: none;
+}
+#login-button:hover{
+    cursor: pointer;
+}
+
+.container-bottom #forgot-pass{
+    width: 45%;
+    color: #3ac3bf;
+    background-color: black;
+    opacity: inherit;
+    border: none;
+}
+#forgot-pass:focus{
+    outline: none;
+    cursor: pointer;
+}
+#forgot-pass:hover{
+    cursor: pointer;
+}
+
+#register-new-user p {
+    color: white;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: row;
+    opacity: 0.7;
+  }
+  p:before, p:after{
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid white;
+    margin: auto;
+  }
+  p:before {
+    margin-right: 5px
+  }
+  p:after {
+    margin-left: 5px
+  }
+#create-new{
+    display: flex;
+    justify-content: center;
+}
+
+#new-user{
+    width: 60%;
+    margin-top: 0.4rem;
+    border-radius: 18px;
+    height: 2rem;
+    background-color: black;
+    color: white;
+    border: gray 1px solid;
+}
+
+/*MEDIA QUERIES*/
+
+@media only screen and (max-width: 700px) {
+#parent-container{
+    transform: skew(0deg);
+    min-width: 300px;
+}
+#main-content-container{
+    transform: skew(0deg);
+}
+}
+
+@media only screen and (max-height: 600px) {
+#main-content-container{
+    padding-top: 0rem;
+    justify-content: space-evenly;
+}
+}
+@media only screen and (max-height: 380px) {
+        #logo-container{
+            margin-top: 0.5rem;
+            min-width: 180px;
+        }
+        .inputfield-login{
+            font-size: 1.1rem;
+        }
+        .container-top p{
+            font-size: 0.8rem;
+            margin: 0;    
+        }
+        #span-login{
+            font-size: 0.9rem;
+        }
+        .inputfield-login{
+            height: 1.2rem;
+        }
+    }
